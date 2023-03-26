@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'django_cpf_cnpj',
+    'corsheaders',
     'django_filters',
     'core',
 ]
@@ -51,6 +52,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
 ]
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
@@ -112,6 +115,8 @@ cloudinary.config(
     api_key=os.environ.get("117912794282771"),
     api_secret=os.environ.get("DKKYKKRQE4B1A__W9h71W4AD6mQ"),
 )
+
+CORS_ALLOWED_ORIGINS = True
 
 # REST_FRAMEWORK = {
 #     'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend']
