@@ -116,7 +116,7 @@ cloudinary.config(
     api_secret=os.environ.get("DKKYKKRQE4B1A__W9h71W4AD6mQ"),
 )
 
-CORS_ALLOWED_ORIGINS = True
+CORS_ALLOW_ALL_ORIGINS = True
 
 # REST_FRAMEWORK = {
 #     'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend']
